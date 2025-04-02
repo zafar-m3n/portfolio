@@ -43,29 +43,29 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-bee-black">
-      <div className="container px-4 mx-auto">
+    <section id="skills" className="bg-bee-black py-20">
+      <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="section-heading mx-auto">My Skills</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-bee-gray bg-opacity-20 p-6 rounded-lg border border-bee-yellow/20 hover:border-bee-yellow/50 transition-all duration-300"
+              className="rounded-lg border border-bee-yellow/20 bg-bee-gray bg-opacity-20 p-6 transition-all duration-300 hover:border-bee-yellow/50"
             >
-              <h3 className="text-xl font-bold mb-4 text-bee-yellow">{category.title}</h3>
+              <h3 className="mb-4 text-xl font-bold text-bee-yellow">{category.title}</h3>
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
-                    <div className="flex justify-between mb-1">
+                    <div className="mb-1 flex justify-between">
                       <span className="text-gray-300">{skill.name}</span>
                       <span className="text-bee-yellow">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-bee-dark rounded-full h-2.5">
+                    <div className="h-2.5 w-full rounded-full bg-bee-dark">
                       <div
-                        className="bg-bee-yellow h-2.5 rounded-full transition-all duration-1000"
+                        className="h-2.5 rounded-full bg-bee-yellow transition-all duration-1000"
                         style={{ width: `${skill.level}%` }}
                       />
                     </div>
@@ -77,15 +77,25 @@ const Skills = () => {
         </div>
 
         <div className="mt-16">
-          <h3 className="text-xl font-bold mb-6 text-bee-yellow text-center">Other Technologies & Tools I Work With</h3>
+          <h3 className="mb-6 text-center text-xl font-bold text-bee-yellow">
+            Other Technologies & Tools I Work With
+          </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "AWS", "Firebase", "Redux", "Next.js", "GitHub Actions",
-              "Agile/Scrum", "RESTful APIs", "Responsive Design", "Webpack", "Jest"
+              "AWS",
+              "Firebase",
+              "Redux",
+              "Next.js",
+              "GitHub Actions",
+              "Agile/Scrum",
+              "RESTful APIs",
+              "Responsive Design",
+              "Webpack",
+              "Jest",
             ].map((tech, index) => (
               <span
                 key={index}
-                className="px-4 py-2 rounded-full bg-bee-gray/20 text-white border border-bee-yellow/30 hover:border-bee-yellow hover:bg-bee-yellow/10 transition-colors duration-300"
+                className="rounded-full border border-bee-yellow/30 bg-bee-gray/20 px-4 py-2 text-white transition-colors duration-300 hover:border-bee-yellow hover:bg-bee-yellow/10"
               >
                 {tech}
               </span>
