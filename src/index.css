@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background-color: theme("colors.bee.black");
+  color: theme("colors.bee.yellow");
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: 0 0% 7%;
+  --foreground: 60 100% 55%;
+  --card: 0 0% 11%;
+  --card-foreground: 60 100% 55%;
+  --popover: 0 0% 7%;
+  --popover-foreground: 60 100% 55%;
+  --primary: 60 100% 55%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 0 0% 18%;
+  --secondary-foreground: 60 100% 55%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 60 100% 60%;
+  --accent-foreground: 0 0% 7%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 18%;
+  --input: 0 0% 18%;
+  --ring: 60 100% 55%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bee-black text-bee-yellow;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded bg-bee-yellow px-6 py-2 font-medium text-bee-black transition-all duration-300 hover:bg-bee-light;
+  }
+
+  .section-heading {
+    @apply relative mb-6 inline-block text-3xl font-bold;
+  }
+
+  .section-heading::after {
+    @apply absolute -bottom-2 left-0 h-1 w-3/4 bg-bee-yellow content-[''];
+  }
+
+  .nav-link {
+    @apply relative overflow-hidden transition-colors hover:text-bee-light;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 h-0.5 w-0 bg-bee-yellow transition-all duration-300 content-[''];
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
