@@ -7,7 +7,7 @@ const Skills = () => {
         { name: "JavaScript", level: 95 },
         { name: "HTML/CSS", level: 85 },
         { name: "TailwindCSS", level: 90 },
-        { name: "UI/UX Design", level: 75 },
+        { name: "UI/UX Design", level: 80 },
       ],
     },
     {
@@ -25,7 +25,7 @@ const Skills = () => {
       skills: [
         { name: "MySQL", level: 85 },
         { name: "MongoDB", level: 80 },
-        { name: "Redis", level: 70 },
+        { name: "Firebase", level: 80 },
         { name: "Database Design", level: 85 },
         { name: "ORM/ODM", level: 80 },
       ],
@@ -34,9 +34,9 @@ const Skills = () => {
       title: "Other Skills",
       skills: [
         { name: "Git/GitHub", level: 85 },
-        { name: "OOP", level: 80 },
-        { name: "Data Structures", level: 75 },
-        { name: "Java", level: 65 },
+        { name: "OOP", level: 70 },
+        { name: "Flutter/Kotlin", level: 65 },
+        { name: "Java", level: 75 },
         { name: "C#", level: 60 },
       ],
     },
@@ -80,18 +80,20 @@ const Skills = () => {
           <h3 className="mb-6 text-center text-xl font-bold text-bee-yellow">
             Other Technologies & Tools I Work With
           </h3>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-4">
             {[
               "AWS",
-              "Firebase",
+              
               "Redux",
               "Next.js",
               "GitHub Actions",
               "Agile/Scrum",
+              "Jira",
               "RESTful APIs",
               "Responsive Design",
-              "Webpack",
               "Jest",
+              "Postman",
+              "Figma",
             ].map((tech, index) => (
               <span
                 key={index}
