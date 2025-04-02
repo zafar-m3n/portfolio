@@ -24,7 +24,7 @@ const Projects = () => {
       image: ceylontea,
       tags: ["html", "css", "javascript"],
       demoLink: "https://zafar-m3n.github.io",
-      codeLink: "https://github.com/zafar-m3n/ceylon-tea-website",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/zafar-m3n.github.io" }],
     },
     {
       id: 2,
@@ -33,8 +33,10 @@ const Projects = () => {
         "A powerful doctor appointment management system built with the MERN stack. Handles scheduling, patient records, and real-time availability efficiently.",
       image: ezdoctor,
       tags: ["react", "node", "mongodb"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [
+        { label: "View Frontend Code", url: "https://github.com/zafar-m3n/EzDoctor-frontend" },
+        { label: "View Backend Code", url: "https://github.com/zafar-m3n/EzDoctor-backend" },
+      ],
     },
     {
       id: 3,
@@ -43,8 +45,7 @@ const Projects = () => {
         "A fully functional Snakes and Ladders game built with Java and OOP. Features a clean GUI and smooth gameplay — nostalgic and educational.",
       image: snakes,
       tags: ["java"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/snakesandladders" }],
     },
     {
       id: 4,
@@ -53,8 +54,7 @@ const Projects = () => {
         "A modern freelancing platform connecting Sri Lankan developers with local clients. Built using the MERN stack with MySQL for robust data management.",
       image: joblk,
       tags: ["react", "node", "mysql"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/G3_Job.lk" }],
     },
     {
       id: 5,
@@ -63,8 +63,7 @@ const Projects = () => {
         "An AI-powered itinerary generator mobile app that helps tourists plan perfect trips across Sri Lanka. Built in Kotlin with OpenAI for smart suggestions.",
       image: xploresl,
       tags: ["kotlin", "openai"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/ExploreSriLanka" }],
     },
     {
       id: 6,
@@ -73,8 +72,10 @@ const Projects = () => {
         "A full-featured LMS built for an educational institute in Sri Lanka. Developed using PHP and Laravel, it supports courses, assessments, and student progress tracking.",
       image: nahs,
       tags: ["laravel", "php"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [
+        { label: "View Main LMS Code", url: "https://github.com/zafar-m3n/NAHS_Learning" },
+        { label: "View Quiz App Code", url: "https://github.com/zafar-m3n/NAHS_QuizApp" },
+      ],
     },
     {
       id: 7,
@@ -83,8 +84,16 @@ const Projects = () => {
         "An end-to-end delivery management platform with real-time tracking, route optimization, and dashboard insights. Developed using Angular and Node.js.",
       image: packagedelivery,
       tags: ["node", "angular"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [
+        {
+          label: "View Frontend Code",
+          url: "https://github.com/zafar-m3n/PackageDeliveryManagementFrontend",
+        },
+        {
+          label: "View Backend Code",
+          url: "https://github.com/zafar-m3n/PackageDeliveryManagementBackend",
+        },
+      ],
     },
     {
       id: 8,
@@ -93,8 +102,10 @@ const Projects = () => {
         "A secure platform to manage internships within universities. Features Microsoft account authentication and intuitive dashboards for students and coordinators.",
       image: internconnect,
       tags: ["react", "node", "auth"],
-      demoLink: "#",
-      codeLink: "#",
+      codeLinks: [
+        { label: "View Frontend Code", url: "https://github.com/zafar-m3n/internconnect-client" },
+        { label: "View Backend Code", url: "https://github.com/zafar-m3n/internconnect-server" },
+      ],
     },
     {
       id: 9,
@@ -103,8 +114,8 @@ const Projects = () => {
         "A clean, responsive React website for an automotive spare parts seller in Sri Lanka. Features product listings, inquiries, and category browsing.",
       image: ymiautohub,
       tags: ["react"],
-      demoLink: "#",
-      codeLink: "#",
+      demoLink: "https://ymiautohub.com",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/YMIAutoHub" }],
     },
     {
       id: 10,
@@ -113,8 +124,6 @@ const Projects = () => {
         "My personal developer portfolio showcasing my journey, projects, and contact information. Built with React and TailwindCSS to reflect my style.",
       image: portfolio,
       tags: ["react"],
-      demoLink: "#",
-      codeLink: "#",
     },
   ];
 
@@ -178,26 +187,34 @@ const Projects = () => {
                   alt={project.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bee-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <div className="absolute bottom-4 left-4 right-4 flex justify-between">
-                    <a
-                      href={project.demoLink}
-                      className="rounded bg-bee-yellow px-3 py-1 text-sm text-bee-black transition-colors duration-300 hover:bg-bee-light"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.codeLink}
-                      className="rounded bg-bee-gray px-3 py-1 text-sm text-white transition-colors duration-300 hover:bg-bee-gray/80"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Code
-                    </a>
+                {(project.demoLink || project.codeLinks) && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-bee-black/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
+                      {project.demoLink && (
+                        <a
+                          href={project.demoLink}
+                          className="rounded bg-bee-yellow px-3 py-1 text-sm text-bee-black transition-colors duration-300 hover:bg-bee-light"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                      {project.codeLinks &&
+                        project.codeLinks.map((link, index) => (
+                          <a
+                            key={index}
+                            href={link.url}
+                            className="rounded bg-bee-gray px-3 py-1 text-sm text-white transition-colors duration-300 hover:bg-bee-gray/80"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
               <div className="p-5">
                 <h3 className="mb-2 text-xl font-bold text-bee-yellow">{project.title}</h3>
