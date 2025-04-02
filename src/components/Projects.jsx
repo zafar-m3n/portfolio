@@ -1,4 +1,16 @@
 import { useState } from "react";
+import {
+  ezdoctor,
+  ceylontea,
+  snakes,
+  joblk,
+  xploresl,
+  nahs,
+  packagedelivery,
+  internconnect,
+  ymiautohub,
+  portfolio,
+} from "../assets/images";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -6,61 +18,101 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Ceylon Tea Website",
       description:
-        "A full-stack e-commerce platform with user authentication, product management, shopping cart, and payment integration.",
-      image: "https://same-assets.com/i/d33307e5-3f76-45c6-97a1-06b1b3cf1e7c",
-      tags: ["react", "node", "mongodb"],
-      demoLink: "#",
-      codeLink: "#",
+        "A beautifully crafted promotional site for the Sri Lankan tea industry. My first ever website using HTML, CSS, and JavaScript. Simple, elegant, and informative.",
+      image: ceylontea,
+      tags: ["html", "css", "javascript"],
+      demoLink: "https://zafar-m3n.github.io",
+      codeLink: "https://github.com/zafar-m3n/ceylon-tea-website",
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "EzDoctor",
       description:
-        "A collaborative task management application with real-time updates, task assignment, and progress tracking.",
-      image: "https://same-assets.com/i/ec58f91e-8f6c-41c4-916f-7a9ac51ae2ea",
-      tags: ["react", "firebase"],
+        "A powerful doctor appointment management system built with the MERN stack. Handles scheduling, patient records, and real-time availability efficiently.",
+      image: ezdoctor,
+      tags: ["react", "node", "mongodb"],
       demoLink: "#",
       codeLink: "#",
     },
     {
       id: 3,
-      title: "Financial Dashboard",
+      title: "Snakes and Ladders",
       description:
-        "An interactive dashboard for tracking financial data with charts, filters, and data visualization components.",
-      image: "https://same-assets.com/i/7e14ca21-dcfd-4e6c-95f2-0f8b7cee4cbb",
-      tags: ["react", "node", "mysql"],
+        "A fully functional Snakes and Ladders game built with Java and OOP. Features a clean GUI and smooth gameplay — nostalgic and educational.",
+      image: snakes,
+      tags: ["java"],
       demoLink: "#",
       codeLink: "#",
     },
     {
       id: 4,
-      title: "Blog Platform",
+      title: "Job.lk",
       description:
-        "A content management system for bloggers with markdown support, categories, and user comments.",
-      image: "https://same-assets.com/i/f70cde5b-6f96-40a0-ab2e-b34cd13ed33e",
-      tags: ["laravel", "mysql"],
+        "A modern freelancing platform connecting Sri Lankan developers with local clients. Built using the MERN stack with MySQL for robust data management.",
+      image: joblk,
+      tags: ["react", "node", "mysql"],
       demoLink: "#",
       codeLink: "#",
     },
     {
       id: 5,
-      title: "Real-Time Chat Application",
+      title: "XploreSriLanka",
       description:
-        "A messaging platform with private chats, group conversations, and media sharing capabilities.",
-      image: "https://same-assets.com/i/8da4d2c0-4fa1-42e5-b44c-eb55d4db8bed",
-      tags: ["react", "node", "mongodb"],
+        "An AI-powered itinerary generator mobile app that helps tourists plan perfect trips across Sri Lanka. Built in Kotlin with OpenAI for smart suggestions.",
+      image: xploresl,
+      tags: ["kotlin", "openai"],
       demoLink: "#",
       codeLink: "#",
     },
     {
       id: 6,
-      title: "Restaurant Reservation System",
+      title: "NAHS_Learning",
       description:
-        "A web application for managing restaurant reservations, table assignments, and waitlists.",
-      image: "https://same-assets.com/i/6cbe4a1f-c6aa-4eae-9e9a-f1cc1d21c3dc",
-      tags: ["laravel", "mysql"],
+        "A full-featured LMS built for an educational institute in Sri Lanka. Developed using PHP and Laravel, it supports courses, assessments, and student progress tracking.",
+      image: nahs,
+      tags: ["laravel", "php"],
+      demoLink: "#",
+      codeLink: "#",
+    },
+    {
+      id: 7,
+      title: "Package Delivery Management System",
+      description:
+        "An end-to-end delivery management platform with real-time tracking, route optimization, and dashboard insights. Developed using Angular and Node.js.",
+      image: packagedelivery,
+      tags: ["node", "angular"],
+      demoLink: "#",
+      codeLink: "#",
+    },
+    {
+      id: 8,
+      title: "Internconnect",
+      description:
+        "A secure platform to manage internships within universities. Features Microsoft account authentication and intuitive dashboards for students and coordinators.",
+      image: internconnect,
+      tags: ["react", "node", "auth"],
+      demoLink: "#",
+      codeLink: "#",
+    },
+    {
+      id: 9,
+      title: "YMIAutohub",
+      description:
+        "A clean, responsive React website for an automotive spare parts seller in Sri Lanka. Features product listings, inquiries, and category browsing.",
+      image: ymiautohub,
+      tags: ["react"],
+      demoLink: "#",
+      codeLink: "#",
+    },
+    {
+      id: 10,
+      title: "Portfolio Website",
+      description:
+        "My personal developer portfolio showcasing my journey, projects, and contact information. Built with React and TailwindCSS to reflect my style.",
+      image: portfolio,
+      tags: ["react"],
       demoLink: "#",
       codeLink: "#",
     },
@@ -73,6 +125,11 @@ const Projects = () => {
     { value: "laravel", label: "Laravel" },
     { value: "mongodb", label: "MongoDB" },
     { value: "mysql", label: "MySQL" },
+    { value: "php", label: "PHP" },
+    { value: "java", label: "Java" },
+    { value: "kotlin", label: "Kotlin" },
+    { value: "html", label: "HTML" },
+    { value: "css", label: "CSS" },
   ];
 
   const filteredProjects =
@@ -86,8 +143,8 @@ const Projects = () => {
         <div className="mb-12 text-center">
           <h2 className="section-heading mx-auto">My Projects</h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-            Here are some of the projects I've worked on. Each project showcases different skills
-            and technologies that I've mastered throughout my journey.
+            Here are some of the projects I've worked on. Each one demonstrates my passion for
+            development, creativity, and solving real-world problems through technology.
           </p>
         </div>
 
@@ -113,7 +170,7 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group overflow-hidden rounded-lg bg-bee-gray/20 transition-all duration-300 hover:scale-[1.02] hover:transform"
+              className="group overflow-hidden rounded-lg bg-bee-gray/20 transition-all duration-300 hover:scale-[1.02]"
             >
               <div className="relative h-48 overflow-hidden">
                 <img

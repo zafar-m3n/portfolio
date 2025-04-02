@@ -80,10 +80,10 @@ const Skills = () => {
           <h3 className="mb-6 text-center text-xl font-bold text-bee-yellow">
             Other Technologies & Tools I Work With
           </h3>
-          <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-4">
+          <div className="mx-auto flex max-w-5xl flex-wrap justify-center gap-4">
             {[
               "AWS",
-              
+              "Angular",
               "Redux",
               "Next.js",
               "GitHub Actions",
