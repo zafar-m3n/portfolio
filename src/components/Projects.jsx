@@ -10,6 +10,8 @@ import {
   internconnect,
   ymiautohub,
   portfolio,
+  thceylonchai,
+  finmyanmar,
 } from "../assets/images";
 
 const Projects = () => {
@@ -119,6 +121,26 @@ const Projects = () => {
     },
     {
       id: 10,
+      title: "FIN Myanmar",
+      description:
+        "FIN Myanmar is a non-profit organization dedicated to empowering communities in Myanmar through education, healthcare, and sustainable development programs.",
+      image: finmyanmar,
+      tags: ["react", "javascript"],
+      demoLink: "https://fin-myanmar.vercel.app",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/FINMyanmar" }],
+    },
+    {
+      id: 11,
+      title: "T & H Ceylon Chai",
+      description:
+        "A modern e-commerce website for a Sri Lankan tea brand. Built with React and integrated with WhatsApp for seamless customer inquiries and orders.",
+      image: thceylonchai,
+      tags: ["react", "javascript"],
+      demoLink: "https://th-ceylon-chai.vercel.app",
+      codeLinks: [{ label: "View Code", url: "https://github.com/zafar-m3n/THCeylonChai" }],
+    },
+    {
+      id: 12,
       title: "Portfolio Website",
       description:
         "My personal developer portfolio showcasing my journey, projects, and contact information. Built with React and TailwindCSS to reflect my style.",

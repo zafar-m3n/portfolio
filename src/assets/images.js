@@ -8,6 +8,8 @@ import packagedelivery from "./packagedelivery.jpg";
 import internconnect from "./internconnect.jpg";
 import ymiautohub from "./ymiautohub.png";
 import portfolio from "./portfolio.png";
+import thceylonchai from "./thceylonchai.png";
+import finmyanmar from "./finmyanmar.png";
 
 export {
   ezdoctor,
@@ -20,4 +22,6 @@ export {
   internconnect,
   ymiautohub,
   portfolio,
+  thceylonchai,
+  finmyanmar,
 };

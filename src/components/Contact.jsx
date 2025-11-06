@@ -94,7 +94,7 @@ const Contact = () => {
                     href="tel:+94762526128"
                     className="text-gray-300 transition-colors hover:text-bee-yellow"
                   >
-                    +94 762526128
+                    +94 76 252 6128
                   </a>
                 </div>
               </div>
